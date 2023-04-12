@@ -8,7 +8,7 @@ num = int(input('Ведите число:'))
 digitsum = 0
 
 while num > 0:
-    digitsum = digitsum + num % 10
-    num = num // 10
+    digitsum +=  num % 10
+    num //= 10
 
 print(digitsum)    

@@ -14,7 +14,7 @@
 
 
 n = abs(int(input('Введите количество чисел в A: ')))
-a_entered = input("Введите числа через пробел: ").split()
+a_entered = input('Введите числа через пробел: ').split()
 a_num = list(map(int, a_entered))
 if len(a_num) != n:
     print('Числа не соответствуют введенному количеству!')

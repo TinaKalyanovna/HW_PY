@@ -11,3 +11,21 @@
 #     1 2 3 4 5
 #     6
 #     -> 5
+
+n = abs(int(input('Введите количество чисел в A: ')))
+a_entered = input('Введите числа через пробел: ').split()
+a_num = list(map(int, a_entered))
+if len(a_num) != n or n == 0:
+    print('Числа не соответствуют введенному количеству!')
+else:
+    x = int(input('Введите число X, которое сравниваем в строке чисел: '))
+    min = abs(x - a_num[0])
+    index = 0
+    for i in range(1, n):
+        count = abs(x - a_num[i])
+        if count < min:
+            min = count
+            index = i
+    print(f'Число {a_num[index]} в A  ближе по величине к числу {x}')
+    
+    
